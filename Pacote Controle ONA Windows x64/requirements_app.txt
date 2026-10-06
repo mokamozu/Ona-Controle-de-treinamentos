@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pywebview
+pyinstaller
+openpyxl>=3.1

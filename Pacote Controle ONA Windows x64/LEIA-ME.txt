@@ -1,0 +1,37 @@
+CONTROLE DE TREINAMENTOS - ONA
+Organização Nacional de Acreditação
+
+COMO ABRIR
+1. Extraia o arquivo ZIP para uma pasta do computador.
+2. Abra a pasta extraida.
+3. De dois cliques em ControleTreinamentosSOS.exe.
+
+REQUISITOS
+- Windows 10 ou Windows 11 de 64 bits.
+- O Microsoft Edge WebView2 Runtime. Ele ja vem instalado na maioria dos
+  computadores Windows 10/11. Se o aplicativo informar que esta faltando,
+  instale-o pelo site oficial:
+  https://developer.microsoft.com/microsoft-edge/webview2/
+- Nao e necessario instalar Python nem manter conexao com a internet para
+  usar o aplicativo depois que ele estiver instalado.
+
+DADOS E PRIVACIDADE
+- O banco de dados fica no perfil local do usuario, em:
+  %LOCALAPPDATA%\Controle Treinamentos SOS\sos.db
+- Os dados nao sao sincronizados entre computadores. Para trocar de computador,
+  transfira esse arquivo por um meio aprovado pela empresa e substitua o banco
+  no destino com o aplicativo fechado.
+- O pacote nao inclui banco de dados nem dados pessoais.
+
+IMPORTAR PARTICIPANTES DE UMA PLANILHA
+- Na tela Participantes, clique em "Importar Excel" e selecione um arquivo .xlsx.
+- A primeira linha deve conter os cabecalhos Matrícula, Nome e Cargo.
+  E-mail e opcional. Tambem sao aceitos os nomes Mat, Funcao e Email.
+- Cada linha seguinte representa um participante. Linhas sem dados sao ignoradas.
+- Matriculas ja cadastradas sao ignoradas e os cadastros existentes nao sao alterados.
+- Salve matriculas como texto no Excel para preservar zeros a esquerda.
+- Use o botao "Novo cargo" na tela Participantes para cadastrar cargos reutilizaveis.
+- Use "Remover cargo" para excluir cargos sem participantes associados. Cargos em uso precisam ser reatribuidos antes da remocao.
+- A opcao "Limpar todos os dados" tambem apaga todos os cargos cadastrados.
+
+Se o aplicativo nao abrir, contate o suporte de TI e informe o erro exibido.

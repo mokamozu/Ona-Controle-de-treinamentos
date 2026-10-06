@@ -1,0 +1,1333 @@
+{
+ "config": {
+  "email": "wmartins@unimedvx.com.br",
+  "alertDays": 30,
+  "deadline": "31/12/2026"
+ },
+ "participantes": [
+  {
+   "id": 1,
+   "nome": "Wallyson Marck Martins",
+   "mat": "64348",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 2,
+   "nome": "Renato Suhet de Carvalho",
+   "mat": "3183",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 3,
+   "nome": "Wesley Correia Benedito",
+   "mat": "70952",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 4,
+   "nome": "Luís Fernando Vieira Costa",
+   "mat": "72174",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 5,
+   "nome": "Marcelo A do Nascimento",
+   "mat": "62406",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 6,
+   "nome": "Daniel Siqueira Xavier",
+   "mat": "60360",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 7,
+   "nome": "Renato Chiqueto dos Anjos",
+   "mat": "71655",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 8,
+   "nome": "Johnny Santos Valvassori",
+   "mat": "62271",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 9,
+   "nome": "Zaqueu Rodrigues Pimentel",
+   "mat": "69962",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 10,
+   "nome": "Alexandre Diego dos Reis",
+   "mat": "71285",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 11,
+   "nome": "André Alonso Justino",
+   "mat": "62454",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 12,
+   "nome": "Abraão Nascimento Oliveira",
+   "mat": "69804",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 13,
+   "nome": "Carlos Eduardo de Moraes",
+   "mat": "71753",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 14,
+   "nome": "Thales Henrique Gomes Ferreira",
+   "mat": "72170",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 15,
+   "nome": "Thiago Rocha Loureiro",
+   "mat": "72267",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 16,
+   "nome": "Ivanilton Rocha dos Santos",
+   "mat": "72139",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 17,
+   "nome": "Bernado Xavier da Silva",
+   "mat": "72137",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 18,
+   "nome": "Izaias Furechi de Souza",
+   "mat": "71770",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 19,
+   "nome": "Vinícius Ribeiro Sousa",
+   "mat": "72511",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 20,
+   "nome": "Valquimar de Araujo Borges",
+   "mat": "71757",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 21,
+   "nome": "Marcelo Teixeira Rosa",
+   "mat": "71797",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 22,
+   "nome": "Paulo Correia Bomfim",
+   "mat": "70099",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 23,
+   "nome": "Júlio César Santana Piovanelli Ma",
+   "mat": "70409",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 24,
+   "nome": "Douglas Alves de Abreu",
+   "mat": "71861",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 25,
+   "nome": "Wanderson dos S. Martins",
+   "mat": "61114",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 26,
+   "nome": "Ricardo dos Santos Pereira",
+   "mat": "65609",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 27,
+   "nome": "Thais Silva Santos Neves",
+   "mat": "70601",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 28,
+   "nome": "Ivanildo Silva Neris",
+   "mat": "64778",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 29,
+   "nome": "Nathan de Jesus Silva Paes",
+   "mat": "69587",
+   "cargo": "TÉCNICO DE ENFERMAGEM",
+   "isEx": true
+  },
+  {
+   "id": 30,
+   "nome": "Bruno Santana de Souza",
+   "mat": "70586",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 31,
+   "nome": "Ronaldo da Silva Carvalho",
+   "mat": "67273",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 32,
+   "nome": "Jader Camargo dos Reis",
+   "mat": "68738",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 33,
+   "nome": "Marcos Antonio Rocha do Nascimento",
+   "mat": "71364",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 34,
+   "nome": "Marcelo Bispo Rodrigues",
+   "mat": "68588",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 35,
+   "nome": "Felipe Ribeiro do Nascimento",
+   "mat": "66916",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 36,
+   "nome": "Marcelo",
+   "mat": "70987",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 37,
+   "nome": "Silas Abreu da Costa",
+   "mat": "63240",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 38,
+   "nome": "Leandro Rodrigues Faria",
+   "mat": "69612",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 39,
+   "nome": "Jackson Pereira",
+   "mat": "70475",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 40,
+   "nome": "Whofferson Rossi da Costa",
+   "mat": "71915",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 41,
+   "nome": "Daniel Teixeira Gaspar",
+   "mat": "64317",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 42,
+   "nome": "Adimilson Pinto Duarte",
+   "mat": "62278",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 43,
+   "nome": "Jefferson Sa de Almeida",
+   "mat": "69626",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 44,
+   "nome": "Wanderson Dias de Oliveira",
+   "mat": "63232",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 45,
+   "nome": "Maic Neves de Matos",
+   "mat": "71246",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 46,
+   "nome": "Batista De Oliveira Rodrigues",
+   "mat": "71124",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 47,
+   "nome": "Augustinho Nascimento",
+   "mat": "60450",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 48,
+   "nome": "Willian Monteiro Pereira",
+   "mat": "72144",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 49,
+   "nome": "Renato Borges",
+   "mat": "3092",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 50,
+   "nome": "Kleuber Rodrigues Camara",
+   "mat": "72375",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 51,
+   "nome": "Flavio Pereira do Nascimento",
+   "mat": "65798",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 52,
+   "nome": "Marcelo Vaz Bezerra",
+   "mat": "72177",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 53,
+   "nome": "Luiz Heitor Pinto de Araujo",
+   "mat": "71709",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 54,
+   "nome": "Niquifaldo de Lima Casimiro",
+   "mat": "72128",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 55,
+   "nome": "Luis Claudio Miranda",
+   "mat": "71509",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 56,
+   "nome": "Weglay Moraes Bezerra",
+   "mat": "71458",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 57,
+   "nome": "Adson Gomes De Souza",
+   "mat": "66794",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 58,
+   "nome": "Ricardo Christ Mattos",
+   "mat": "68862",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 59,
+   "nome": "Raphael Sezine Gama Preisigke",
+   "mat": "70812",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 60,
+   "nome": "Carlos Henrique Mazega",
+   "mat": "65861",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 61,
+   "nome": "Wendel Pinheiro Silva",
+   "mat": "69502",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 62,
+   "nome": "Romerio Paiva Maziole",
+   "mat": "71936",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 63,
+   "nome": "Eduardo Moura de Lima",
+   "mat": "71560",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 64,
+   "nome": "Daurio Lennon Rocha Hoffmann",
+   "mat": "72015",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 65,
+   "nome": "Hudson Romulo Pimentel",
+   "mat": "72033",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 66,
+   "nome": "Thiago Ferreira da Silva",
+   "mat": "69378",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 67,
+   "nome": "Wanderson Carvalho",
+   "mat": "68990",
+   "cargo": "CONDUTOR"
+  },
+  {
+   "id": 68,
+   "nome": "Fabio Santa Clara",
+   "mat": "71504",
+   "cargo": "CONDUTOR"
+  },
+  {
+   "id": 69,
+   "nome": "Hugo Salles",
+   "mat": "68236",
+   "cargo": "A CONFIRMAR"
+  },
+  {
+   "id": 70,
+   "nome": "Anderson Coutinho",
+   "mat": "70421",
+   "cargo": "A CONFIRMAR"
+  }
+ ],
+ "turmas": [
+  {
+   "id": 1,
+   "code": "T1",
+   "tema": "Oxigenoterapia em Transporte",
+   "data": "14-15/02/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "70987",
+    "71124",
+    "71509",
+    "71364",
+    "69626",
+    "64348",
+    "61114",
+    "63240",
+    "70421",
+    "70952",
+    "70099",
+    "3092",
+    "69378",
+    "69502",
+    "71246",
+    "71458",
+    "64778",
+    "70475",
+    "69962",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 2,
+   "code": "T2",
+   "tema": "Simulação de Broncoaspiração",
+   "data": "14-15/02/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "70987",
+    "71124",
+    "71509",
+    "71364",
+    "70099",
+    "63232",
+    "3092",
+    "71458",
+    "71246",
+    "69962",
+    "70475",
+    "69502",
+    "69378",
+    "64778",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 3,
+   "code": "T3",
+   "tema": "Simulação e Análise de Quase Acidentes",
+   "data": "14-15/02/2026",
+   "instrutores": "Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "62406",
+    "71124",
+    "71509",
+    "71364",
+    "70099",
+    "71458",
+    "71246",
+    "69962",
+    "70475",
+    "69502",
+    "69378",
+    "64778",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 4,
+   "code": "T4",
+   "tema": "Identificação Precoce de Sepse",
+   "data": "08/03/2026",
+   "instrutores": "Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "64348",
+    "68236",
+    "70987",
+    "71364"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 5,
+   "code": "T5",
+   "tema": "Manejo de Pacientes Frágeis e Vulneráveis",
+   "data": "07/03/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "64317",
+    "69378",
+    "60360",
+    "70586",
+    "64778",
+    "69587",
+    "71458",
+    "71509",
+    "71560",
+    "65609",
+    "71246",
+    "62278",
+    "70099",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 6,
+   "code": "T6",
+   "tema": "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+   "data": "09-10/05/2026",
+   "instrutores": "Andre Alonso, Johnny Santos e Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69804",
+    "64778",
+    "70586",
+    "3183",
+    "70952",
+    "69587"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 7,
+   "code": "T7",
+   "tema": "Segurança em Ambientes Confinados",
+   "data": "09-10/05/2026",
+   "instrutores": "Andre Alonso e Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69804",
+    "71246",
+    "60450",
+    "63232",
+    "69587",
+    "62278",
+    "71560",
+    "72033",
+    "72015",
+    "71124",
+    "64778",
+    "70586",
+    "69378",
+    "3183",
+    "63240",
+    "71458",
+    "66794",
+    "65609",
+    "64348"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 8,
+   "code": "T8",
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+   "data": "09-10/05/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "71915",
+    "60360",
+    "68236",
+    "71509",
+    "71364",
+    "68862",
+    "70987",
+    "69804",
+    "71246",
+    "60450",
+    "63232",
+    "69587",
+    "62278",
+    "71560",
+    "72033",
+    "72015",
+    "71124",
+    "64778",
+    "70586",
+    "69378",
+    "3183",
+    "63240"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 9,
+   "code": "T9",
+   "tema": "Prevenção de Quedas Durante Transferências",
+   "data": "20/06/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69962",
+    "66794",
+    "72177",
+    "65609",
+    "60360",
+    "68862",
+    "72144"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 10,
+   "code": "T10",
+   "tema": "Técnicas de Mobilização Segura",
+   "data": "20/06/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69962",
+    "72144",
+    "66794",
+    "72177",
+    "65609",
+    "60360",
+    "68862"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 11,
+   "code": "T11",
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+   "data": "11-12/07/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "72033",
+    "60360",
+    "70586",
+    "71915",
+    "65609",
+    "71560",
+    "69378",
+    "67273",
+    "64778",
+    "71753",
+    "71124",
+    "62278",
+    "71246",
+    "3092",
+    "72144",
+    "71655",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 12,
+   "code": "T12",
+   "tema": "Farmacologia em Emergências",
+   "data": "11-12/07/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "70586",
+    "65609",
+    "67273",
+    "64778",
+    "71753",
+    "69962",
+    "69804",
+    "71655"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 13,
+   "code": "T13",
+   "tema": "Contenção Não-Traumática",
+   "data": "22-23/08/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "71560",
+    "61114",
+    "65798",
+    "68862",
+    "67273",
+    "70586",
+    "64778",
+    "72033",
+    "72174",
+    "71915",
+    "71458",
+    "68738",
+    "69804",
+    "68236",
+    "66794",
+    "71509",
+    "72170",
+    "72177",
+    "72128",
+    "71364",
+    "71753",
+    "60450",
+    "72144",
+    "3092",
+    "71655",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 14,
+   "code": "T14",
+   "tema": "Prevenção de Quedas",
+   "data": "22-23/08/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "71560",
+    "61114",
+    "65798",
+    "68862",
+    "67273",
+    "70586",
+    "64778",
+    "72033",
+    "72174",
+    "71915",
+    "68738",
+    "71458",
+    "69804",
+    "68236",
+    "66794",
+    "71509",
+    "72170",
+    "72177",
+    "72128",
+    "71364",
+    "60450",
+    "62278",
+    "71753",
+    "72144",
+    "71655",
+    "3092",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 15,
+   "code": "T15",
+   "tema": "Checklist de Segurança Pré-Atendimento",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "71246",
+    "69378",
+    "71915",
+    "60360",
+    "64778",
+    "71509",
+    "72033",
+    "65798",
+    "69502",
+    "71753",
+    "72015",
+    "70586",
+    "65609",
+    "69587",
+    "71560",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "71458",
+    "70987",
+    "71364",
+    "71709",
+    "3092"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 16,
+   "code": "T16",
+   "tema": "Manejo de Surtos Psiquiátricos",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "71246",
+    "69378",
+    "71915",
+    "60360",
+    "64778",
+    "71509",
+    "72033",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "3092",
+    "71458",
+    "70987",
+    "71364",
+    "71709"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 17,
+   "code": "T17",
+   "tema": "Simulação de Falha de Equipamento Crítico e Plano de Contingência",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "64778",
+    "71753",
+    "70586",
+    "65609",
+    "69587",
+    "65798",
+    "69502",
+    "72015",
+    "71560",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "69378",
+    "71915",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "71458",
+    "70987",
+    "71364",
+    "71709"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 18,
+   "code": "T18",
+   "tema": "Comunicação e Handoff (Passagem de Plantão)",
+   "data": "10/10/2026",
+   "instrutores": "Equipe de Educação Continuada",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 19,
+   "code": "T19",
+   "tema": "Lavagem das Mãos",
+   "data": "17/10/2026",
+   "instrutores": "Comissão CCIH",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 20,
+   "code": "T20",
+   "tema": "Segregação de Resíduos",
+   "data": "24/10/2026",
+   "instrutores": "Equipe de Qualidade",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 21,
+   "code": "T21",
+   "tema": "Workshop de PCR em Idosos",
+   "data": "31/10/2026",
+   "instrutores": "Marcelo Alcantara e Coordenação",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 22,
+   "code": "T22",
+   "tema": "Monitorização Pré-Hospitalar",
+   "data": "07/11/2026",
+   "instrutores": "Andre Alonso",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 23,
+   "code": "T23",
+   "tema": "Ética e Legislação",
+   "data": "14/11/2026",
+   "instrutores": "Assessoria Jurídica / Coordenação",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 24,
+   "code": "T24",
+   "tema": "Treino Multidisciplinar",
+   "data": "21/11/2026",
+   "instrutores": "Instrutores SOS",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 25,
+   "code": "T25",
+   "tema": "Reposição – Temas de Fevereiro e Março (Oxigenoterapia, Broncoaspiração, Quase Acidentes, Frágeis, Sepse)",
+   "data": "21/11/2026",
+   "instrutores": "Marcelo Alcantara e Johnny Santos",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 26,
+   "code": "T26",
+   "tema": "Protocolos de Aspiração de Vias Aéreas",
+   "data": "28/11/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 27,
+   "code": "T27",
+   "tema": "Evolução de Enfermagem",
+   "data": "05/12/2026",
+   "instrutores": "Johnny Santos",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 28,
+   "code": "T28",
+   "tema": "Módulo de \"Cultura Justa\" e Relato de Incidentes e Eventos Adversos",
+   "data": "12/12/2026",
+   "instrutores": "Gerência de Qualidade",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 29,
+   "code": "T29",
+   "tema": "Reposição – Temas de Abril a Agosto (Checklist, Surtos, Falha, Confinados, Resíduos, etc.)",
+   "data": "12/12/2026",
+   "instrutores": "Equipe de Educação SOS",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  }
+ ],
+ "topics": [
+  "Oxigenoterapia em Transporte",
+  "Simulação de Broncoaspiração",
+  "Simulação e Análise de Quase Acidentes",
+  "Identificação Precoce de Sepse",
+  "Manejo de Pacientes Frágeis e Vulneráveis",
+  "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+  "Segurança em Ambientes Confinados",
+  "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+  "Prevenção de Quedas Durante Transferências",
+  "Técnicas de Mobilização Segura",
+  "Farmacologia em Emergências",
+  "Contenção Não-Traumática",
+  "Prevenção de Quedas",
+  "Checklist de Segurança Pré-Atendimento",
+  "Manejo de Surtos Psiquiátricos",
+  "Simulação de Falha de Equipamento Crítico e Plano de Contingência",
+  "Comunicação e Handoff (Passagem de Plantão)",
+  "Workshop de PCR em Idosos",
+  "Lavagem das Mãos",
+  "Monitorização Pré-Hospitalar",
+  "Ética e Legislação",
+  "Treino Multidisciplinar",
+  "Protocolos de Aspiração de Vias Aéreas",
+  "Evolução de Enfermagem",
+  "Módulo de \"Cultura Justa\" e Relato de Incidentes e Eventos Adversos",
+  "Workshop Prático \"Mãos na Massa\" com Acessos Venosos Complexos",
+  "Segregação de Resíduos"
+ ],
+ "programa": [
+  {
+   "num": 1,
+   "tema": "Oxigenoterapia em Transporte",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T1"
+  },
+  {
+   "num": 2,
+   "tema": "Simulação de Broncoaspiração",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T2"
+  },
+  {
+   "num": 3,
+   "tema": "Simulação e Análise de Quase Acidentes",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T3"
+  },
+  {
+   "num": 4,
+   "tema": "Identificação Precoce de Sepse",
+   "periodo": "Março",
+   "status": "Realizado",
+   "turmaCode": "T4"
+  },
+  {
+   "num": 5,
+   "tema": "Manejo de Pacientes Frágeis e Vulneráveis",
+   "periodo": "Março",
+   "status": "Realizado",
+   "turmaCode": "T5"
+  },
+  {
+   "num": 6,
+   "tema": "Checklist de Segurança Pré-Atendimento (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T15"
+  },
+  {
+   "num": 7,
+   "tema": "Manejo de Surtos Psiquiátricos (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T16"
+  },
+  {
+   "num": 8,
+   "tema": "Simulação de Falha de Equipamento Crítico (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T17"
+  },
+  {
+   "num": 9,
+   "tema": "Checklist de Segurança Pré-Atendimento (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T15"
+  },
+  {
+   "num": 10,
+   "tema": "Manejo de Surtos Psiquiátricos (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T16"
+  },
+  {
+   "num": 11,
+   "tema": "Simulação de Falha de Equipamento Crítico (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T17"
+  },
+  {
+   "num": 12,
+   "tema": "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T6"
+  },
+  {
+   "num": 13,
+   "tema": "Segurança em Ambientes Confinados",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T7"
+  },
+  {
+   "num": 14,
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes (Turma 1)",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T8"
+  },
+  {
+   "num": 15,
+   "tema": "Prevenção de Quedas Durante Transferências",
+   "periodo": "Junho",
+   "status": "Realizado",
+   "turmaCode": "T9"
+  },
+  {
+   "num": 16,
+   "tema": "Técnicas de Mobilização Segura",
+   "periodo": "Junho",
+   "status": "Realizado",
+   "turmaCode": "T10"
+  },
+  {
+   "num": 17,
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes (Turma 2)",
+   "periodo": "Julho",
+   "status": "Realizado",
+   "turmaCode": "T11"
+  },
+  {
+   "num": 18,
+   "tema": "Farmacologia em Emergências",
+   "periodo": "Julho",
+   "status": "Realizado",
+   "turmaCode": "T12"
+  },
+  {
+   "num": 19,
+   "tema": "Contenção Não-Traumática e Prevenção de Quedas",
+   "periodo": "Agosto",
+   "status": "Realizado",
+   "turmaCode": "T13/T14"
+  },
+  {
+   "num": 20,
+   "tema": "Comunicação e Handoff (Passagem de Plantão)",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T18"
+  },
+  {
+   "num": 21,
+   "tema": "Lavagem das Mãos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T19"
+  },
+  {
+   "num": 22,
+   "tema": "Segregação de Resíduos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T20"
+  },
+  {
+   "num": 23,
+   "tema": "Workshop de PCR em Idosos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T21"
+  },
+  {
+   "num": 24,
+   "tema": "Monitorização Pré-Hospitalar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T22"
+  },
+  {
+   "num": 25,
+   "tema": "Ética e Legislação",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T23"
+  },
+  {
+   "num": 26,
+   "tema": "Treino Multidisciplinar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T24"
+  },
+  {
+   "num": 27,
+   "tema": "Reposição – Temas de Fev/Mar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T25"
+  },
+  {
+   "num": 28,
+   "tema": "Protocolos de Aspiração de Vias Aéreas",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T26"
+  },
+  {
+   "num": 29,
+   "tema": "Evolução de Enfermagem",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T27"
+  },
+  {
+   "num": 30,
+   "tema": "Módulo de \"Cultura Justa\" e Relato de Incidentes",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T28"
+  },
+  {
+   "num": 31,
+   "tema": "Reposição – Temas de Abr/Ago",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T29"
+  },
+  {
+   "num": 32,
+   "tema": "Workshop Prático \"Mãos na Massa\" com Acessos Venosos Complexos (Enf)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 33,
+   "tema": "Lavagem das Mãos (Reforço Noturno)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 34,
+   "tema": "Segregação de Resíduos (Reforço Bases)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 35,
+   "tema": "Auditoria Final de Listas de Frequência",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 36,
+   "tema": "Consolidação e Certificação Anual SOS 2026",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  }
+ ]
+}

@@ -1,0 +1,228 @@
+Inicio: 06/10/2026 15:10:02,90 
+Python 3.13.14
+Requirement already satisfied: pip in .\.venv\Lib\site-packages (26.1.2)
+Collecting pip
+  Using cached pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+Using cached pip-26.2.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 26.1.2
+    Uninstalling pip-26.1.2:
+      Successfully uninstalled pip-26.1.2
+Successfully installed pip-26.2.1
+Collecting fastapi (from -r requirements_app.txt (line 1))
+  Using cached fastapi-0.142.2-py3-none-any.whl.metadata (27 kB)
+Collecting uvicorn (from -r requirements_app.txt (line 2))
+  Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting pywebview (from -r requirements_app.txt (line 3))
+  Using cached pywebview-6.2.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pyinstaller (from -r requirements_app.txt (line 4))
+  Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
+Collecting openpyxl>=3.1 (from -r requirements_app.txt (line 5))
+  Using cached openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting starlette>=0.46.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting pydantic>=2.9.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi->-r requirements_app.txt (line 1))
+  Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting click>=7.0 (from uvicorn->-r requirements_app.txt (line 2))
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn->-r requirements_app.txt (line 2))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting pythonnet (from pywebview->-r requirements_app.txt (line 3))
+  Using cached pythonnet-3.2.0-cp311.cp312.cp313.cp314.cp315-none-any.whl.metadata (6.5 kB)
+Collecting proxy_tools (from pywebview->-r requirements_app.txt (line 3))
+  Using cached proxy_tools-0.1.0-py3-none-any.whl
+Collecting bottle (from pywebview->-r requirements_app.txt (line 3))
+  Using cached bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting altgraph (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Collecting packaging>=22.0 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pefile>=2022.5.30 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pyinstaller_hooks_contrib-2026.8-py3-none-any.whl.metadata (16 kB)
+Collecting pywin32-ctypes>=0.2.1 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting setuptools>=42.0.0 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting et-xmlfile (from openpyxl>=3.1->-r requirements_app.txt (line 5))
+  Using cached et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached pydantic_core-2.46.5-cp313-cp313-win_amd64.whl.metadata (6.7 kB)
+Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting clr_loader<0.4.0,>=0.3.1 (from pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached clr_loader-0.3.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting cffi>=1.17 (from clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached cffi-2.1.1-cp313-cp313-win_amd64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.17->clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached fastapi-0.142.2-py3-none-any.whl (144 kB)
+Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Using cached pywebview-6.2.1-py3-none-any.whl (525 kB)
+Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
+Using cached openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pefile-2024.8.26-py3-none-any.whl (74 kB)
+Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
+Using cached pydantic_core-2.46.5-cp313-cp313-win_amd64.whl (2.0 MB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached pyinstaller_hooks_contrib-2026.8-py3-none-any.whl (462 kB)
+Using cached pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Using cached starlette-1.7.0-py3-none-any.whl (78 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Using cached altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Using cached bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+Using cached et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Using cached pythonnet-3.2.0-cp311.cp312.cp313.cp314.cp315-none-any.whl (222 kB)
+Using cached clr_loader-0.3.1-py3-none-any.whl (55 kB)
+Using cached cffi-2.1.1-cp313-cp313-win_amd64.whl (185 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Installing collected packages: proxy_tools, bottle, altgraph, typing-extensions, setuptools, pywin32-ctypes, pycparser, pefile, packaging, idna, h11, et-xmlfile, click, annotated-types, annotated-doc, uvicorn, typing-inspection, pyinstaller-hooks-contrib, pydantic-core, opentelemetry-api, openpyxl, cffi, anyio, starlette, pyinstaller, pydantic, clr_loader, pythonnet, fastapi, pywebview
+
+Successfully installed altgraph-0.17.5 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 bottle-0.13.4 cffi-2.1.1 click-8.5.0 clr_loader-0.3.1 et-xmlfile-2.0.0 fastapi-0.142.2 h11-0.16.0 idna-3.20 openpyxl-3.1.5 opentelemetry-api-1.45.1 packaging-26.3 pefile-2024.8.26 proxy_tools-0.1.0 pycparser-3.0 pydantic-2.13.5 pydantic-core-2.46.5 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.8 pythonnet-3.2.0 pywebview-6.2.1 pywin32-ctypes-0.2.3 setuptools-84.0.0 starlette-1.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+702 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+703 INFO: Python: 3.13.14
+719 INFO: Platform: Windows-11-10.0.26300-SP0
+719 INFO: Python environment: C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\.venv
+730 INFO: Removing temporary files and cleaning cache in C:\Users\meyiq\AppData\Local\pyinstaller
+2448 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS '
+ 'Windows x64\\.venv\\Scripts\\pyinstaller.exe',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\\python313.zip',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\\DLLs',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\\Lib',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0',
+ 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS '
+ 'Windows x64\\.venv',
+ 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS '
+ 'Windows x64\\.venv\\Lib\\site-packages',
+ 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS '
+ 'Windows x64']
+2963 INFO: Appending 'datas' from .spec
+2965 INFO: checking Analysis
+2965 INFO: Building Analysis because Analysis-00.toc is non existent
+2965 INFO: Looking for Python shared library...
+2965 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\python313.dll
+2965 INFO: Running Analysis Analysis-00.toc
+2965 INFO: Target bytecode optimization level: 0
+2966 INFO: Initializing module dependency graph...
+2967 INFO: Initializing module graph hook caches...
+2988 INFO: Analyzing modules for base_library.zip ...
+4596 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5154 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6582 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7664 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8222 INFO: Caching module dependency graph...
+8260 INFO: Analyzing C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\app.py
+8303 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8315 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8651 INFO: Processing standard module hook 'hook-uvicorn.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+9326 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9460 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+10378 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+10391 INFO: SetuptoolsInfo: initializing cached setuptools info...
+11845 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12192 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12361 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12704 INFO: Processing standard module hook 'hook-webview.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\webview\\__pyinstaller'
+13367 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13533 INFO: Processing standard module hook 'hook-clr.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\pythonnet\\_pyinstaller'
+13569 INFO: Processing standard module hook 'hook-clr_loader.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+13705 INFO: Processing standard module hook 'hook-pycparser.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+13893 INFO: Processing standard module hook 'hook-setuptools.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13913 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13959 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13966 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+13980 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13985 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+14155 INFO: Processing standard module hook 'hook-_osx_support.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+14180 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+14483 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+14489 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+14505 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+14510 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+15089 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+15095 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+15682 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+15689 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+16515 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+16637 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+17315 INFO: Processing standard module hook 'hook-anyio.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+19342 INFO: Processing standard module hook 'hook-pydantic.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20532 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+21878 INFO: Processing standard module hook 'hook-opentelemetry.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+22241 INFO: Processing standard module hook 'hook-openpyxl.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+23468 INFO: Analyzing hidden import 'uvicorn.__main__'
+23469 INFO: Analyzing hidden import 'uvicorn.lifespan'
+23469 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
+23472 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
+23480 INFO: Analyzing hidden import 'uvicorn.loops'
+23480 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
+23482 INFO: Analyzing hidden import 'uvicorn.loops.auto'
+23484 INFO: Analyzing hidden import 'uvicorn.loops.zuvloop'
+23485 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
+23487 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
+23488 INFO: Analyzing hidden import 'uvicorn.workers'
+23493 INFO: Processing module hooks (post-graph stage)...
+23701 WARNING: Hidden import "pycparser.lextab" not found!
+23701 WARNING: Hidden import "pycparser.yacctab" not found!
+23879 WARNING: Hidden import "tzdata" not found!
+24014 INFO: Performing binary vs. data reclassification (42 entries)
+24782 INFO: Looking for ctypes DLLs
+24861 INFO: Analyzing run-time hooks ...
+24866 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+24869 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+24871 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+24874 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'C:\\Users\\meyiq\\Downloads\\unimed_sos\\unimed_sos\\Pacote Controle SOS Windows x64\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+24888 INFO: Creating base_library.zip...
+24915 INFO: Looking for dynamic libraries
+28206 INFO: Extra DLL search directories (AddDllDirectory): []
+28207 INFO: Extra DLL search directories (PATH): []
+28658 INFO: Warnings written to C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\build\ControleTreinamentosSOS\warn-ControleTreinamentosSOS.txt
+28749 INFO: Graph cross-reference written to C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\build\ControleTreinamentosSOS\xref-ControleTreinamentosSOS.html
+28792 INFO: checking PYZ
+28793 INFO: Building PYZ because PYZ-00.toc is non existent
+28793 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\build\ControleTreinamentosSOS\PYZ-00.pyz
+29537 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\build\ControleTreinamentosSOS\PYZ-00.pyz completed successfully.
+29568 INFO: checking PKG
+29568 INFO: Building PKG because PKG-00.toc is non existent
+29568 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg
+32675 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg completed successfully.
+32679 INFO: Bootloader C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+32679 INFO: checking EXE
+32679 INFO: Building EXE because EXE-00.toc is non existent
+32679 INFO: Building EXE from EXE-00.toc
+32679 INFO: Copying bootloader EXE to C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\dist\ControleTreinamentosSOS.exe
+32753 INFO: Copying icon to EXE
+32790 INFO: Copying 0 resources to EXE
+32790 INFO: Embedding manifest in EXE
+32827 INFO: Appending PKG archive to EXE
+32986 INFO: Fixing EXE headers
+34720 INFO: Building EXE from EXE-00.toc completed successfully.
+34723 INFO: Build complete! The results are available in: C:\Users\meyiq\Downloads\unimed_sos\unimed_sos\Pacote Controle SOS Windows x64\dist

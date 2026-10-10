@@ -3,67 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Controle de Treinamentos | ONA - Organização Nacional de Acreditação</title>
-<link rel="icon" type="image/png" href="/static/icone.png">
+<title>Unimed Vitória | Gestão de Treinamentos</title>
+<link rel="icon" type="image/png" href="/static/logo.png">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <style>
-:root{--g950:#022d2b;--g800:#00645d;--g600:#008f72;--g400:#50bd91;--g200:#bfe8d4;--g50:#f1faf5;
---ona-teal:#006b63;--ona-lime:#b7c900;
---ink:#10281f;--mut:#5d7a6d;--warn:#b7791f;--bad:#b4412f;--glass:rgba(255,255,255,.62);--line:rgba(0,86,58,.14)}
+:root{--g950:#00573e;--g800:#006f49;--g600:#00895b;--g400:#54b486;--g200:#d5ecdf;--g50:#e6efe8;
+--brand-lime:#b7c900;--ink:#26362e;--mut:#687a70;--warn:#a86913;--bad:#b4412f;--glass:#eaf2ec;--line:rgba(0,87,62,.16)}
 *{box-sizing:border-box}
 body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);min-height:100vh;
-background:radial-gradient(900px 500px at 85% -10%,rgba(79,191,138,.35),transparent 60%),
-radial-gradient(700px 500px at -10% 90%,rgba(0,153,93,.18),transparent 60%),var(--g50);display:flex}
-body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
-background-image:radial-gradient(rgba(0,86,58,.10) 1px,transparent 1px);background-size:18px 18px}
-aside{width:248px;flex:none;background:radial-gradient(ellipse at 100% 0,rgba(183,201,0,.14),transparent 42%),
-linear-gradient(155deg,#042f30,var(--g950) 52%,#075c4e);color:#fff;padding:28px 18px;
+background:linear-gradient(145deg,#07583f,#064832 72%,#043e30);display:flex}
+aside{width:260px;flex:none;background:linear-gradient(155deg,#034c37,#043f30 72%,#063929);color:#fff;padding:26px 18px;
 display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh;z-index:2;overflow:hidden}
 aside::after{content:"";position:absolute;top:0;right:0;width:3px;height:100%;
-background:linear-gradient(180deg,transparent,rgba(183,201,0,.65) 30%,rgba(80,189,145,.35) 72%,transparent);opacity:.7}
-.brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:30px;position:relative;z-index:1}
-.brand-logo{height:64px;width:140px;flex:none}
-.brand-logo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 3px 10px rgba(183,201,0,.12))}
-.brand b{display:block;font-size:15px;letter-spacing:.2px}.brand small{opacity:.72;font-size:11.5px;line-height:1.55}
+background:linear-gradient(180deg,transparent,var(--g600) 28%,var(--brand-lime) 50%,var(--g400) 76%,transparent);opacity:.55}
+.brand{display:flex;align-items:center;gap:12px;margin-bottom:30px;position:relative;z-index:1;text-decoration:none;color:inherit}
+.brand-logo{height:54px;width:54px;flex:none}
+.brand-logo img{display:block;width:100%;height:100%;object-fit:contain}
+.brand b{display:block;font-size:16px;letter-spacing:.1px;color:#fff}.brand small{display:block;margin-top:4px;color:#c6ded0;font-size:11.5px;line-height:1.45}
+.brand .city{color:#c5d953}
+.sidebar-actions{margin-top:auto;display:grid;gap:10px;position:relative;z-index:1}
+.sidebar-actions button.b.ghost{width:100%;color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35)}
 nav{position:relative;z-index:1}
-nav button{all:unset;cursor:pointer;display:block;width:100%;padding:11px 14px;border-radius:10px;font-size:14px;opacity:.78;
-position:relative;transition:background .25s,opacity .25s,padding .25s,transform .25s}
-nav button:hover{background:rgba(255,255,255,.08);opacity:1;transform:translateX(2px)}
-nav button.on{background:linear-gradient(100deg,rgba(80,189,145,.22),rgba(255,255,255,.06));opacity:1;padding-left:20px}
-nav button.on::before{content:"";position:absolute;left:8px;top:11px;bottom:11px;width:3px;border-radius:2px;background:var(--ona-lime);box-shadow:0 0 12px rgba(183,201,0,.55)}
-main{flex:1;padding:34px 40px;max-width:1280px;position:relative;z-index:1}
-h1{font-size:25px;margin:0 0 4px;font-weight:650;letter-spacing:-.025em;color:#123b35}
+nav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:11px;width:100%;padding:11px 14px;border-radius:9px;font-size:14px;color:#e0eee5;opacity:.9;
+position:relative;transition:background .2s,color .2s,transform .2s}
+nav button svg{width:18px;height:18px;flex:none;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+nav button:hover{background:rgba(255,255,255,.1);color:#fff;transform:translateX(2px)}
+nav button.on{background:rgba(255,255,255,.14);color:#fff;font-weight:650;padding-left:20px}
+nav button.on::before{content:"";position:absolute;left:8px;top:10px;bottom:10px;width:3px;border-radius:2px;background:#c5d953}
+main{flex:1;padding:34px 40px;max-width:1360px;position:relative;z-index:1;color:#f3f8f4}
+h1{font-size:25px;margin:0 0 4px;font-weight:650;letter-spacing:-.025em;color:#fff}
 section h1::after{content:"";display:block;width:42px;height:3px;border-radius:3px;margin-top:9px;
-background:linear-gradient(90deg,var(--ona-teal),var(--ona-lime))}
-.sub{color:var(--mut);margin:0 0 24px;font-size:14px}
+background:linear-gradient(90deg,var(--g600),var(--brand-lime))}
+.sub{color:#c6ddd0;margin:0 0 24px;font-size:14px}
 section{display:none}section.on{display:block;animation:in .5s cubic-bezier(.2,.7,.2,1) both}
 @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
-.card{background:var(--glass);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
-border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(0,86,58,.09),inset 0 0 0 1px var(--line);border-radius:16px;padding:20px;
+.card{background:var(--glass);color:var(--ink);border:1px solid rgba(222,239,227,.65);box-shadow:0 7px 22px rgba(0,25,17,.13);border-radius:13px;padding:20px;
 transition:transform .25s ease,box-shadow .25s ease}
-.grid>.card:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(0,86,58,.13),inset 0 0 0 1px var(--line)}
-.chart-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.42));
-border-color:rgba(255,255,255,.88);box-shadow:0 16px 36px rgba(0,86,58,.10),inset 0 1px 0 rgba(255,255,255,.9)}
-.chart-card::before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);pointer-events:none}
+.grid>.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,25,17,.2)}
+.chart-card{position:relative;overflow:hidden;background:#e3eee6;box-shadow:0 7px 22px rgba(0,25,17,.15)}
+.chart-card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--g600),var(--brand-lime));pointer-events:none;opacity:.7}
 .card h3{margin:0 0 10px;font-size:14px;color:var(--g800);font-weight:650;letter-spacing:.2px}
+.followup-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.followup-heading h3{font-size:16px;margin-bottom:4px}
+.followup-heading p{margin:0;color:var(--mut);font-size:13px}
+.notify-toggle{display:flex;align-items:center;gap:8px;color:var(--g950);font-size:12px;font-weight:600;cursor:pointer}
+.notify-toggle input{accent-color:var(--g600)}
+.deadline-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin:16px 0}
+.deadline-stat{padding:12px 14px;border-radius:10px;background:#dcebe1}
+.deadline-stat b{display:block;color:var(--g950);font-size:22px}
+.deadline-stat span{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#52665a}
+.deadline-stat.late{background:#f4e3df}.deadline-stat.late b{color:var(--bad)}
+.deadline-lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.deadline-lists h4{margin:4px 0 8px;color:var(--g950);font-size:13px}
+.deadline-list{list-style:none;padding:0;margin:0;max-height:280px;overflow:auto}
+.deadline-list li{padding:8px 10px;border-bottom:1px solid var(--line);font-size:13px}
+.deadline-list li:last-child{border-bottom:0}
+.deadline-list small{display:block;color:var(--mut);margin-top:3px;font-size:11.5px}
+.tag.good{background:#dcebe1;color:var(--g950)}
+.tag.late{background:#f4e3df;color:#9e3628}
 .chart-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .chart-heading h3{margin-bottom:6px}
-.chart-legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px;color:var(--mut);font-size:11.5px}
+.chart-legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px;color:#52665a;font-size:11.5px}
 .chart-legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
-.chart-legend i{width:9px;height:9px;border-radius:3px;background:#15966a}
-.chart-legend .pending{background:#e2a64a}
+.chart-legend i{width:9px;height:9px;border-radius:3px;background:var(--g600)}
+.chart-legend .pending{background:#b8dfcf}
 .kpi .v{font-size:36px;font-weight:700;color:var(--g800);line-height:1.1;font-variant-numeric:tabular-nums}
-.kpi .l{font-size:12.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.kpi .l{font-size:12.5px;color:#52665a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
 .kpi.bad .v{color:var(--bad)}.kpi{position:relative;overflow:hidden}
 .kpi::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;
-background:repeating-linear-gradient(45deg,rgba(0,153,93,.14) 0 2px,transparent 2px 7px)}
+background:repeating-linear-gradient(45deg,rgba(0,137,91,.10) 0 2px,transparent 2px 7px)}
 .banner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;color:#fff;
-background:linear-gradient(120deg,#064844 0%,#08796a 58%,#07936f 100%);border:1px solid rgba(255,255,255,.3);
+background:linear-gradient(120deg,#00573e 0%,#00754f 58%,#00895b 100%);border:1px solid rgba(255,255,255,.3);
 border-radius:16px;padding:18px 22px;position:relative;overflow:hidden;isolation:isolate;
-box-shadow:0 12px 28px rgba(0,86,76,.18)}
+box-shadow:0 10px 24px rgba(0,87,62,.16)}
 .banner::after{content:"";position:absolute;z-index:-1;width:280px;height:280px;right:8%;top:-205px;border-radius:50%;
-border:1px solid rgba(221,235,76,.22);box-shadow:0 0 0 20px rgba(221,235,76,.035),0 0 0 42px rgba(221,235,76,.025);
+border:1px solid rgba(183,201,0,.25);box-shadow:0 0 0 20px rgba(183,201,0,.045),0 0 0 42px rgba(183,201,0,.03);
 animation:brand-glow 8s ease-in-out infinite alternate}
 .banner>div,.banner>a{position:relative;z-index:1}
 @keyframes brand-glow{from{transform:translate3d(0,0,0) scale(.96);opacity:.55}to{transform:translate3d(0,14px,0) scale(1.04);opacity:1}}
@@ -71,25 +86,27 @@ animation:brand-glow 8s ease-in-out infinite alternate}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);padding:10px 12px;border-bottom:1px solid var(--line)}
 td{padding:10px 12px;border-bottom:1px solid var(--line)}tbody tr{animation:in .45s both;animation-delay:calc(var(--i)*22ms)}
-tbody tr:hover{background:rgba(0,153,93,.07)}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
-.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600;background:rgba(0,153,93,.13);color:var(--g800)}
+tbody tr:hover{background:rgba(0,137,91,.055)}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600;background:#e9f4ed;color:var(--g800)}
 .tag.bad{background:rgba(180,65,47,.13);color:var(--bad)}.tag.warn{background:rgba(183,121,31,.15);color:var(--warn)}
 .tag.off{background:rgba(93,122,109,.15);color:var(--mut)}
 button.b,a.b{cursor:pointer;border:1px solid var(--g600);background:var(--g600);color:#fff;border-radius:10px;padding:9px 16px;font-size:13.5px;
 font-weight:600;transition:transform .15s,box-shadow .2s;text-decoration:none;display:inline-block}
-button.b:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,143,114,.3)}
-button.b.ghost{background:transparent;color:var(--g800);border-color:var(--line)}button.sm{padding:5px 11px;font-size:12.5px}
-input,select{font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.75);min-width:0}
+button.b:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,137,91,.22)}
+button.b.ghost,a.b.ghost{background:#e1eee5;color:var(--g950);border-color:#b8d2c1}
+.banner a.b.ghost{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.55)}
+button.sm{padding:5px 11px;font-size:12.5px}
+input,select{font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:#f3f8f4;min-width:0}
 input:focus,select:focus{outline:2px solid var(--g400);outline-offset:1px}
 .bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.bar input{flex:1;min-width:220px}
-.track{height:9px;border-radius:9px;background:rgba(0,86,58,.1);overflow:hidden;min-width:120px}
+.track{height:9px;border-radius:9px;background:rgba(0,87,62,.1);overflow:hidden;min-width:120px}
 .fill{height:100%;width:0;border-radius:9px;transition:width 1s cubic-bezier(.2,.7,.2,1);
 background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),linear-gradient(90deg,var(--g400),var(--g600))}
 .fill.w{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#d9a441}
 .fill.r{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#c9604f}
 .chart{height:290px;min-width:0}.chart.fade{animation:in .6s cubic-bezier(.2,.7,.2,1) both}
 @keyframes pop{from{opacity:0;transform:scale(.92) rotate(-4deg)}to{opacity:1;transform:none}}
-dialog{border:0;border-radius:18px;padding:0;width:min(760px,94vw);background:rgba(250,255,252,.96);box-shadow:0 30px 80px rgba(2,40,28,.35)}
+dialog{border:0;border-radius:18px;padding:0;width:min(760px,94vw);background:#eaf2ec;box-shadow:0 30px 80px rgba(2,40,28,.45)}
 dialog::backdrop{background:rgba(2,40,28,.45);backdrop-filter:blur(3px)}dialog[open]{animation:pop .35s both}
 .dh{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
 .db{padding:16px 22px;max-height:60vh;overflow:auto}.df{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end;align-items:center}
@@ -101,17 +118,17 @@ dialog::backdrop{background:rgba(2,40,28,.45);backdrop-filter:blur(3px)}dialog[o
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 #rel{display:none}
 @page{margin:14mm}
-@media print{aside,.bar,button{display:none!important}body{background:#fff}
+@media print{aside,.bar,button{display:none!important}body{background:#fff;color:#10281f}
 body.rel-on aside,body.rel-on main,body.rel-on dialog,body.rel-on #toast{display:none!important}
 body.rel-on{display:block;background:#fff}body.rel-on::before{display:none}
 body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
 #rel *{animation:none!important}
-#rel .rh{display:flex;justify-content:space-between;align-items:flex-end;background:#00563a;color:#fff;padding:14px 18px;border-radius:6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel .rh{display:flex;justify-content:space-between;align-items:flex-end;background:#00573e;color:#fff;padding:14px 18px;border-radius:6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 #rel .rh b{font-size:18px}
-#rel .rs{display:flex;gap:10px;margin:12px 0}#rel .rs div{flex:1;border:1px solid #9fcdb7;border-radius:6px;padding:8px 12px}
-#rel .rs b{display:block;font-size:20px;color:#00563a}
-#rel h2{font-size:14px;color:#00563a;border-bottom:2px solid #00995d;padding-bottom:3px;margin:16px 0 6px}
-#rel table{font-size:11px}#rel th{background:#e6f5ed;color:#00563a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel .rs{display:flex;gap:10px;margin:12px 0}#rel .rs div{flex:1;border:1px solid #b8d9c5;border-radius:6px;padding:8px 12px}
+#rel .rs b{display:block;font-size:20px;color:#00573e}
+#rel h2{font-size:14px;color:#00573e;border-bottom:2px solid #00895b;padding-bottom:3px;margin:16px 0 6px}
+#rel table{font-size:11px}#rel th{background:#e9f4ed;color:#00573e;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 #rel th,#rel td{padding:4px 8px;border-bottom:1px solid #cfe5da}#rel tr{break-inside:avoid}#rel thead{display:table-header-group}
 #rel .rn{font-size:10.5px;color:#5d7a6d;margin-top:14px}
 #rel .sig{margin-top:38px;width:280px;border-top:1px solid #10281f;padding-top:4px;font-size:11px}}
@@ -119,21 +136,21 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
 </head>
 <body>
 <aside>
-  <div class="brand"><div class="brand-logo"><img src="/static/ona-logo.png" alt="ONA - Organização Nacional de Acreditação"></div><div><b>Controle de Treinamentos</b><small><span id="setor">SOS Emergências Médicas</span><br>ONA - Organização Nacional de Acreditação</small></div></div>
+  <div class="brand"><div class="brand-logo"><img src="/static/logo.png" alt="Unimed Vitória"></div><div><b>Unimed <span class="city">Vitória</span></b><small>Gestão de Treinamentos</small></div></div>
   <nav>
-    <button class="on" data-v="dashboard">Dashboard</button>
-    <button data-v="participantes">Participantes</button>
-    <button data-v="turmas">Turmas e Presença</button>
-    <button data-v="cobertura">Cobertura por Tema</button>
+    <button class="on" data-v="dashboard"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"></rect><rect x="13" y="3" width="8" height="5" rx="1.5"></rect><rect x="13" y="10" width="8" height="11" rx="1.5"></rect><rect x="3" y="13" width="8" height="8" rx="1.5"></rect></svg>Dashboard</button>
+    <button data-v="participantes"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20v-1.5a6.5 6.5 0 0 1 13 0V20zM16 5.2a3.5 3.5 0 0 1 0 6.6M18 14a5 5 0 0 1 3.5 4.8V20"></path></svg>Participantes</button>
+    <button data-v="turmas"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 3.5h8l4 4V21H5V3.5zM15 3.5V8h4M8 12h8M8 16h8"></path></svg>Turmas e Presença</button>
+    <button data-v="cobertura"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 6-7"></path><path d="M15 6h5v5"></path></svg>Cobertura por Tema</button>
   </nav>
-  <div style="margin-top:auto;display:grid;gap:10px">
-    <button class="b ghost" id="relatar-problema" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Relatar problema</button>
-    <button class="b ghost" id="limpar" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Limpar todos os dados</button>
+  <div class="sidebar-actions">
+    <button class="b ghost" id="relatar-problema">Relatar problema</button>
+    <button class="b ghost" id="limpar">Limpar todos os dados</button>
   </div>
 </aside>
 <main>
 <section id="dashboard" class="on">
-  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><h1>Painel de Conformidade</h1><p class="sub">Indicadores calculados em tempo real a partir dos lançamentos de presença.</p></div><button class="b" data-rel>Relatório para impressão</button></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><h1>Painel de Treinamentos</h1><p class="sub">Indicadores calculados em tempo real a partir dos lançamentos de presença.</p></div><button class="b" data-rel>Relatório para impressão</button></div>
   <div class="banner"><div><small>Próximo treinamento</small><b id="prox-t">-</b><div id="prox-d" style="opacity:.85;font-size:13px"></div></div>
     <a class="b ghost" id="mail" style="color:#fff;border-color:rgba(255,255,255,.5)" href="#">Notificar convocados</a></div>
   <div class="grid g4" style="margin-bottom:18px" id="kpis"></div>
@@ -143,6 +160,15 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
       <div class="chart-legend" aria-label="Legenda do gráfico"><span><i></i>Treinados</span><span><i class="pending"></i>Pendentes</span></div></div>
       <div id="c2" class="chart"></div></div>
     <div class="card chart-card"><h3>Programa anual 2026, entregas por mês</h3><div id="c3" class="chart"></div></div>
+  </div>
+  <div class="card" style="margin-bottom:18px">
+    <div class="followup-heading"><div><h3>Acompanhamento da conclusão</h3><p>O prazo de 60 dias começa quando você lança e salva a frequência da primeira turma do tema.</p></div>
+      <label class="notify-toggle"><input type="checkbox" id="notify-enabled"> Avisos do Windows</label></div>
+    <div id="prazo-resumo" class="deadline-summary"></div>
+    <div class="deadline-lists">
+      <div><h4>Treinamentos concluídos</h4><ul id="treinos-concluidos" class="deadline-list"></ul></div>
+      <div><h4>Treinamentos pendentes</h4><ul id="treinos-pendentes" class="deadline-list"></ul></div>
+    </div>
   </div>
   <div class="card"><h3>Colaboradores sem nenhuma participação</h3>
     <table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th></tr></thead><tbody id="pend"></tbody></table></div>
@@ -161,8 +187,8 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
   <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Cód.</th><th>Tema</th><th>Data</th><th>Instrutores</th><th class="n">Presentes</th><th>Status</th><th></th></tr></thead><tbody id="tt"></tbody></table></div>
 </section>
 <section id="cobertura">
-  <h1>Cobertura por Tema</h1><p class="sub">Meta de 100% da base ativa em cada um dos temas do programa, do menor para o maior índice.</p>
-  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Tema</th><th class="n">Treinados</th><th class="n">Pendentes</th><th style="width:220px">Cobertura</th><th></th></tr></thead><tbody id="tc"></tbody></table></div>
+  <h1>Cobertura por Tema</h1><p class="sub">O prazo de 60 dias começa ao salvar a frequência da primeira turma realizada do tema. Temas com diferenças apenas entre maiúsculas e minúsculas são agrupados.</p>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Tema</th><th class="n">Treinados</th><th class="n">Pendentes</th><th style="width:220px">Cobertura</th><th>Percentual</th><th>Início / Prazo</th><th>Situação</th></tr></thead><tbody id="tc"></tbody></table></div>
 </section>
 </main>
 <div id="rel"></div><dialog id="dlg"></dialog><div id="toast"></div>
@@ -173,7 +199,7 @@ const api=async(u,o)=>{const r=await fetch(u,o&&{method:o.m,headers:{'Content-Ty
 const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2800)};
 const cap=s=>s.charAt(0)+s.slice(1).toLowerCase();
 const G=['rgba(0,153,93,.62)','rgba(79,191,138,.55)','rgba(0,86,58,.6)','rgba(191,232,212,.8)','rgba(2,40,28,.45)'];
-const lay=(x={})=>({margin:{t:16,r:16,b:42,l:42},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI, system-ui, sans-serif',size:12,color:'#34564a'},hoverlabel:{bgcolor:'#073b2c',bordercolor:'rgba(255,255,255,.4)',font:{color:'#fff',family:'Segoe UI, system-ui, sans-serif'}},...x});
+const lay=(x={})=>({margin:{t:16,r:16,b:42,l:42},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI, system-ui, sans-serif',size:12,color:'#4b5f54'},hoverlabel:{bgcolor:'#00573e',bordercolor:'rgba(255,255,255,.4)',font:{color:'#fff',family:'Segoe UI, system-ui, sans-serif'}},...x});
 const cfg={displayModeBar:false,responsive:true};
 const tag=(t,c='')=>`<span class="tag ${c}">${esc(t)}</span>`;
 const rows=(el,html)=>{el.innerHTML=html.map((h,i)=>h.replace('<tr','<tr style="--i:'+Math.min(i,30)+'"')).join('')};
@@ -190,7 +216,7 @@ function show(v){document.querySelectorAll('nav button').forEach(b=>b.classList.
 
 /* ---------- dashboard ---------- */
 async function loadDash(){
-  const d=await api('/api/dashboard'),k=d.kpis,pr=d.programa;$('#setor').textContent=d.setor;document.title='Controle de Treinamentos | '+d.setor+' - ONA';
+  const [d,cobertura]=await Promise.all([api('/api/dashboard'),api('/api/cobertura')]),k=d.kpis,pr=d.programa;document.title='Unimed Vitória | Gestão de Treinamentos';
   $('#kpis').innerHTML=[['Base ativa',k.base,''],['Treinados',k.treinados,''],['Pendentes (zero treinos)',k.pendentes,'bad'],['Ex-colaboradores',k.ex,'']]
     .map(([l,v,c])=>`<div class="card kpi ${c}"><div class="l">${l}</div><div class="v" data-to="${v}">0</div></div>`).join('');
   document.querySelectorAll('.kpi .v').forEach(e=>count(e,+e.dataset.to));
@@ -200,26 +226,28 @@ async function loadDash(){
   const lista=d.pendentes.map((x,i)=>`${i+1}. ${x.nome} (${x.mat}) - ${x.cargo}`).join('\n');
   $('#mail').href='mailto:?subject='+encodeURIComponent('Convocação de treinamento - '+(p?p.tema:''))+'&body='+encodeURIComponent('Convocados prioritários:\n'+lista);
   rows($('#pend'),d.pendentes.map(x=>`<tr><td><b>${esc(x.nome)}</b></td><td>${esc(x.mat)}</td><td>${tag(x.cargo,'off')}</td></tr>`));
+  renderAcompanhamento(cobertura);
+  syncDeadlineNotifications(cobertura);
   Plotly.newPlot('c1',[{type:'pie',hole:.7,labels:['Treinados','Pendentes'],values:[k.treinados,k.pendentes],sort:false,
     textinfo:'percent',textposition:'inside',insidetextorientation:'horizontal',textfont:{color:'#fff',size:13},
     hovertemplate:'%{label}<br><b>%{value}</b> pessoas (%{percent})<extra></extra>',
-    marker:{colors:['#15966a','#e2a64a'],line:{color:'rgba(255,255,255,.95)',width:3}}}],
+    marker:{colors:['#00895b','#b7c900'],line:{color:'rgba(255,255,255,.95)',width:3}}}],
     lay({margin:{t:8,b:48,l:8,r:8},showlegend:true,legend:{orientation:'h',x:.5,xanchor:'center',y:-.08},
-      annotations:[{text:`Base ativa<br><b>${k.base}</b>`,showarrow:false,x:.5,y:.5,font:{size:14,color:'#315a4a'}}]}),cfg);
+      annotations:[{text:`Base ativa<br><b>${k.base}</b>`,showarrow:false,x:.5,y:.5,font:{size:14,color:'#00573e'}}]}),cfg);
   const pc={};d.pendentes.forEach(p=>pc[p.cargo]=(pc[p.cargo]||0)+1);
   const cs=Object.entries(d.cargos).sort((a,b)=>b[1]-a[1]),nm=cs.map(c=>cap(c[0])),tr=cs.map(c=>c[1]-(pc[c[0]]||0)),pe=cs.map(c=>pc[c[0]]||0),mx=Math.max(...cs.map(c=>c[1]),1);
   const labels=a=>a.map(v=>v?String(v):'');
   Plotly.newPlot('c2',[
     {type:'bar',orientation:'h',name:'Treinados',y:nm,x:tr,text:labels(tr),textposition:'inside',insidetextanchor:'middle',
-      hovertemplate:'%{y}<br>Treinados: <b>%{x}</b><extra></extra>',marker:{color:'#15966a',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#fff',size:12}},
+      hovertemplate:'%{y}<br>Treinados: <b>%{x}</b><extra></extra>',marker:{color:'#00895b',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#fff',size:12}},
     {type:'bar',orientation:'h',name:'Pendentes',y:nm,x:pe,text:labels(pe),textposition:'inside',insidetextanchor:'middle',
-      hovertemplate:'%{y}<br>Pendentes: <b>%{x}</b><extra></extra>',marker:{color:'#e2a64a',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#3f321e',size:12}}],
+      hovertemplate:'%{y}<br>Pendentes: <b>%{x}</b><extra></extra>',marker:{color:'#b7c900',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#334020',size:12}}],
     lay({barmode:'stack',bargap:.38,margin:{t:10,r:10,b:36,l:124},showlegend:false,
       uniformtext:{mode:'hide',minsize:11},yaxis:{autorange:'reversed',showgrid:false,zeroline:false,ticks:'',automargin:true},
       xaxis:{range:[0,mx*1.16],gridcolor:'rgba(0,86,58,.09)',zeroline:false,tickformat:'d',dtick:mx>20?5:1}}),cfg);
   const ms=Object.entries(pr.meses),months=ms.map(m=>m[0].slice(0,3)),done=ms.map(m=>m[1][0]),pending=ms.map(m=>m[1][1]),maxMonth=Math.max(...ms.map(m=>m[1][0]+m[1][1]),1);
   Plotly.newPlot('c3',[
-    {type:'bar',name:'Realizadas',x:months,y:done,hovertemplate:'%{x}<br>Realizadas: <b>%{y}</b><extra></extra>',marker:{color:'#15966a',line:{color:'rgba(255,255,255,.8)',width:1}},},
+    {type:'bar',name:'Realizadas',x:months,y:done,hovertemplate:'%{x}<br>Realizadas: <b>%{y}</b><extra></extra>',marker:{color:'#00895b',line:{color:'rgba(255,255,255,.8)',width:1}},},
     {type:'bar',name:'Pendentes',x:months,y:pending,hovertemplate:'%{x}<br>Pendentes: <b>%{y}</b><extra></extra>',marker:{color:'#b8dfcf',line:{color:'rgba(255,255,255,.9)',width:1}}}],
     lay({barmode:'stack',bargap:.34,margin:{t:16,r:12,b:38,l:38},legend:{orientation:'h',x:.5,xanchor:'center',y:1.14},
       xaxis:{showgrid:false,tickfont:{size:11}},yaxis:{gridcolor:'rgba(0,86,58,.09)',range:[0,maxMonth+1],dtick:1,zeroline:false,tick0:0}}),cfg);
@@ -316,13 +344,30 @@ async function loadTurmas(){TUR=await api('/api/turmas');drawTur()}
 function drawTur(){const q=$('#t-q').value.toLowerCase(),s=$('#t-s').value;
   rows($('#tt'),TUR.filter(t=>(!q||(t.tema+t.instrutores+t.code).toLowerCase().includes(q))&&(!s||t.status===s)).map(t=>
     `<tr><td><b>${esc(t.code)}</b></td><td>${esc(t.tema)}</td><td>${esc(t.data_txt)}</td><td>${esc(t.instrutores)}</td><td class="n">${t.presentes}</td>
-    <td>${tag(t.status,t.status==='Realizada'?'':'warn')}</td><td><button class="b sm" data-id="${t.id}">Lançar presença</button></td></tr>`))}
+    <td>${tag(t.status,t.status==='Realizada'?'':'warn')}</td><td><button class="b sm" data-id="${t.id}">Lançar presença</button>
+    <button class="b ghost sm" data-excluir-turma="${t.id}" style="color:var(--bad);border-color:rgba(180,65,47,.4)">Excluir</button></td></tr>`))}
 ['#t-q','#t-s'].forEach(s=>$(s).oninput=drawTur);
-$('#tt').addEventListener('click',async e=>{const id=e.target.dataset.id;if(!id)return;
+$('#tt').addEventListener('click',async e=>{
+  const excluir=e.target.closest('[data-excluir-turma]');
+  if(excluir){
+    const id=excluir.dataset.excluirTurma,turma=TUR.find(t=>String(t.id)===id);
+    if(!turma||!confirm(`Excluir a turma ${turma.code} - ${turma.tema}?\n\nAs frequências desta turma também serão excluídas e a cobertura do tema será recalculada.`))return;
+    excluir.disabled=true;
+    try{
+      await api(`/api/turmas/${id}`,{m:'DELETE'});
+      await Promise.all([loadTurmas(),loadDash(),loadCob()]);
+      toast(`Turma ${turma.code} excluída`);
+    }catch(error){
+      toast(error.message);
+      excluir.disabled=false;
+    }
+    return;
+  }
+  const button=e.target.closest('[data-id]'),id=button?.dataset.id;if(!id)return;
   const {turma:t,participantes:ps}=await api('/api/turmas/'+id),d=$('#dlg');
   d.innerHTML=`<div class="dh"><div><b>${esc(t.code)} - ${esc(t.tema)}</b><div class="sub" style="margin:2px 0 0;font-size:12.5px">${esc(t.data_txt)}</div></div>
     <button class="b ghost sm" id="all">Marcar todos presentes</button></div>
-    <div class="db">${ps.map(p=>`<div class="prow" data-mat="${esc(p.mat)}"><span>${esc(p.nome)}</span>
+    <div class="db"><p class="sub" style="margin:0 0 10px;color:var(--mut)">Marque a frequência e salve para registrar a turma como realizada e iniciar o prazo de 60 dias.</p>${ps.map(p=>`<div class="prow" data-mat="${esc(p.mat)}"><span>${esc(p.nome)}</span>
     <select><option value="">Sem registro</option><option value="1"${p.presente===true?' selected':''}>Presente</option><option value="0"${p.presente===false?' selected':''}>Ausente</option></select>
     <input placeholder="Justificativa (obrigatória se ausente)" value="${esc(p.justificativa)}"></div>`).join('')}</div>
     <div class="df"><span class="err" id="a-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="a-ok">Salvar frequência</button></div>`;
@@ -330,24 +375,156 @@ $('#tt').addEventListener('click',async e=>{const id=e.target.dataset.id;if(!id)
   $('#all').onclick=()=>d.querySelectorAll('.prow select').forEach(s=>s.value='1');
   $('#a-ok').onclick=async()=>{const registros=[...d.querySelectorAll('.prow')].filter(r=>r.querySelector('select').value!=='')
     .map(r=>({mat:r.dataset.mat,presente:r.querySelector('select').value==='1',justificativa:r.querySelector('input').value}));
-    try{await api(`/api/turmas/${id}/presenca`,{m:'PUT',b:{registros}});d.close();toast('Frequência salva');loadTurmas()}catch(x){$('#a-e').textContent=x.message}}});
+    try{await api(`/api/turmas/${id}/presenca`,{m:'PUT',b:{registros}});syncDeadlineNotifications(await api('/api/cobertura'));d.close();toast('Frequência salva');loadTurmas()}catch(x){$('#a-e').textContent=x.message}}});
 
 /* ---------- cobertura ---------- */
 async function loadCob(){const l=await api('/api/cobertura');
+  syncDeadlineNotifications(l);
+  const dataBr=s=>s?s.split('-').reverse().join('/'):'';
+  const situacao=c=>c.status==='concluido'?tag(c.concluido_no_prazo===false?'Concluído com atraso':'Concluído','good'):
+    c.status==='sem_participantes'?tag('Sem participantes','off'):
+    c.status==='atrasado'?tag(`Atrasado ${Math.abs(c.dias_restantes)} ${Math.abs(c.dias_restantes)===1?'dia':'dias'}`,'late'):
+    c.status==='nao_iniciado'?tag('Não iniciado','off'):
+    c.dias_restantes===0?tag('Prazo hoje','warn'):
+    tag(`${c.dias_restantes} ${c.dias_restantes===1?'dia':'dias'} restantes`,'warn');
   rows($('#tc'),l.length?l.map(c=>`<tr><td>${esc(c.tema)}</td><td class="n">${c.treinados}</td><td class="n">${c.pendentes}</td>
-    <td><div class="track"><div class="fill ${pctCls(c.pct)}" data-w="${c.pct}"></div></div></td>
-    <td>${tag(c.pct+'%',c.pct>=100?'':c.pct>=60?'warn':'bad')}</td></tr>`):['<tr><td colspan="5" style="text-align:center;color:var(--mut);padding:24px">Cadastre participantes para exibir a cobertura por tema.</td></tr>']);grow($('#tc'))}
+    <td><div class="track"><div class="fill ${pctCls(c.pct)}" data-w="${c.pct}"></div></td>
+    <td>${tag(c.pct+'%',c.pct>=100?'good':c.pct>=60?'warn':'bad')}</td>
+    <td>${c.inicio?`${dataBr(c.inicio)} / ${dataBr(c.prazo)}`:'—'}</td><td>${situacao(c)}</td></tr>`):['<tr><td colspan="7" style="text-align:center;color:var(--mut);padding:24px">Cadastre uma turma para exibir temas na cobertura.</td></tr>']);grow($('#tc'))}
+
+function renderAcompanhamento(l){
+  const completos=l.filter(c=>c.status==='concluido'),pendentes=l.filter(c=>c.status!=='concluido');
+  const emAndamento=l.filter(c=>c.status==='em_andamento').length,atrasados=l.filter(c=>c.status==='atrasado').length;
+  const naoIniciados=l.filter(c=>c.status==='nao_iniciado').length,semParticipantes=l.filter(c=>c.status==='sem_participantes').length;
+  $('#prazo-resumo').innerHTML=[
+    ['Concluídos em 100%',completos.length,''],
+    ['Em andamento',emAndamento,''],
+    ['Atrasados',atrasados,'late'],
+    ['Não iniciados',naoIniciados,''],
+    ['Sem participantes',semParticipantes,'']
+  ].map(([label,value,cls])=>`<div class="deadline-stat ${cls}"><b>${value}</b><span>${label}</span></div>`).join('');
+  const dataBr=s=>s?s.split('-').reverse().join('/'):'';
+  $('#treinos-concluidos').innerHTML=!l.length?'<li>Cadastre colaboradores ativos para acompanhar as conclusões.</li>':completos.length?completos.map(c=>{
+    const prazo=c.concluido_no_prazo===true?' · dentro do prazo':c.concluido_no_prazo===false?' · fora do prazo de 60 dias':'';
+    return `<li><b>${esc(c.tema)}</b><small>100% concluído${c.concluido_em?` em ${dataBr(c.concluido_em)}`:''}${prazo}</small></li>`;
+  }).join(''):'<li>Nenhum treinamento chegou a 100% ainda.</li>';
+  $('#treinos-pendentes').innerHTML=!l.length?'<li>Cadastre colaboradores ativos para ver treinamentos pendentes.</li>':pendentes.length?pendentes.map(c=>{
+    const prazo=c.status==='sem_participantes'?'Cadastre colaboradores ativos para acompanhar este tema':
+      c.status==='nao_iniciado'?'Ainda não iniciado · prazo começa na primeira turma realizada':
+      c.status==='atrasado'?`Atrasado há ${Math.abs(c.dias_restantes)} ${Math.abs(c.dias_restantes)===1?'dia':'dias'} · prazo ${dataBr(c.prazo)}`:
+      c.dias_restantes===0?`Prazo hoje · ${dataBr(c.prazo)}`:
+      `${c.dias_restantes} ${c.dias_restantes===1?'dia restante':'dias restantes'} · prazo ${dataBr(c.prazo)}`;
+    const pessoas=c.status==='sem_participantes'?'':`${c.pendentes} ${c.pendentes===1?'colaborador pendente':'colaboradores pendentes'} · `;
+    return `<li><b>${esc(c.tema)}</b><small>${pessoas}${c.pct}% · ${prazo}</small></li>`;
+  }).join(''):'<li>Todos os treinamentos chegaram a 100%.</li>';
+}
+
+const notifyEnabledKey='unimedTreinamentos.notifyEnabled';
+const notifySnapshotKey='unimedTreinamentos.notifySnapshot';
+const notifyCheckbox=$('#notify-enabled');
+let notifyPollErrorShown=false;
+function setNotificationControl(){
+  const supported='Notification' in window;
+  notifyCheckbox.checked=localStorage.getItem(notifyEnabledKey)==='true';
+  notifyCheckbox.disabled=!supported||Notification.permission==='denied';
+  notifyCheckbox.title=!supported?'Este ambiente não oferece notificações do Windows.':
+    Notification.permission==='denied'?'Permissão bloqueada nas configurações do aplicativo.':'';
+}
+function saveNotificationSnapshot(items){
+  localStorage.setItem(notifySnapshotKey,JSON.stringify(Object.fromEntries(items.map(item=>[item.tema,item.status]))));
+}
+function sendWindowsNotification(title,body,tagName){
+  if(!('Notification' in window)||Notification.permission!=='granted')return;
+  try{
+    new Notification(title,{body,tag:tagName,icon:'/static/logo.png'});
+  }catch(error){
+    toast(`Não foi possível exibir o aviso do Windows: ${error.message}`);
+  }
+}
+function syncDeadlineNotifications(items){
+  if(localStorage.getItem(notifyEnabledKey)!=='true'||!('Notification' in window)||Notification.permission!=='granted')return;
+  const raw=localStorage.getItem(notifySnapshotKey);
+  let previous=null;
+  if(raw){
+    try{previous=JSON.parse(raw)}
+    catch(error){
+      localStorage.removeItem(notifySnapshotKey);
+      toast(`O histórico de avisos foi reiniciado: ${error.message}`);
+    }
+  }
+  if(!previous||typeof previous!=='object'||Array.isArray(previous)){
+    saveNotificationSnapshot(items);
+    return;
+  }
+  for(const item of items){
+    const before=previous[item.tema];
+    if(before===undefined){
+      sendWindowsNotification('Novo tema de treinamento',`${item.tema} foi adicionado ao acompanhamento.`,'tema-'+item.tema);
+    }else if(item.status==='concluido'&&before!=='concluido'){
+      sendWindowsNotification('Treinamento concluído',`${item.tema} chegou a 100% de conclusão.`,'concluido-'+item.tema);
+    }else if(item.status==='atrasado'&&before!=='atrasado'){
+      sendWindowsNotification('Prazo de treinamento vencido',`${item.tema} ainda tem ${item.pendentes} colaborador(es) pendente(s).`,'atrasado-'+item.tema);
+    }else if(item.status==='em_andamento'&&before==='nao_iniciado'){
+      sendWindowsNotification('Prazo de 60 dias iniciado',`${item.tema}: ${item.pendentes} colaborador(es) pendente(s), ${item.dias_restantes} dias restantes.`,'inicio-'+item.tema);
+    }
+  }
+  saveNotificationSnapshot(items);
+}
+notifyCheckbox.onchange=async()=>{
+  if(!notifyCheckbox.checked){
+    localStorage.setItem(notifyEnabledKey,'false');
+    toast('Avisos do Windows desativados');
+    return;
+  }
+  if(!('Notification' in window)){
+    notifyCheckbox.checked=false;
+    toast('Este ambiente não oferece notificações do Windows.');
+    return;
+  }
+  try{
+    const permission=Notification.permission==='default'?await Notification.requestPermission():Notification.permission;
+    if(permission!=='granted'){
+      notifyCheckbox.checked=false;
+      localStorage.setItem(notifyEnabledKey,'false');
+      setNotificationControl();
+      toast('Permita notificações nas configurações do aplicativo para ativar os avisos.');
+      return;
+    }
+    const current=await api('/api/cobertura');
+    localStorage.setItem(notifyEnabledKey,'true');
+    saveNotificationSnapshot(current);
+    setNotificationControl();
+    toast('Avisos do Windows ativados');
+  }catch(error){
+    notifyCheckbox.checked=false;
+    localStorage.setItem(notifyEnabledKey,'false');
+    toast(`Não foi possível ativar os avisos: ${error.message}`);
+  }
+};
+setNotificationControl();
+setInterval(async()=>{
+  if(localStorage.getItem(notifyEnabledKey)!=='true'||!('Notification' in window)||Notification.permission!=='granted')return;
+  try{
+    syncDeadlineNotifications(await api('/api/cobertura'));
+    notifyPollErrorShown=false;
+  }catch(error){
+    if(!notifyPollErrorShown){
+      toast(`Não foi possível verificar os avisos: ${error.message}`);
+      notifyPollErrorShown=true;
+    }
+  }
+},60000);
 
 /* ---------- relatório para impressão ---------- */
 async function relatorio(){
   const r=await api('/api/relatorio'),pct=r.base?Math.round(100*r.treinados.length/r.base):0;
   const tab=(l,com)=>l.length?`<table><thead><tr><th>#</th><th>Nome</th><th>Matrícula</th><th>Função</th>${com?'<th>Turmas frequentadas</th><th class="n">Presenças</th>':'<th>Situação</th>'}</tr></thead><tbody>${l.map((p,i)=>`<tr><td>${i+1}</td><td>${esc(p.nome)}</td><td>${esc(p.mat)}</td><td>${esc(cap(p.cargo))}</td>${com?`<td>${esc(p.turmas.join(', '))}</td><td class="n">${p.presencas}</td>`:'<td>Sem participação registrada</td>'}</tr>`).join('')}</tbody></table>`:'<p>Nenhum colaborador nesta situação.</p>';
-  $('#rel').innerHTML=`<div class="rh"><div><b>Relatório de Treinamentos</b><br>${esc(r.setor)} · ONA - Organização Nacional de Acreditação</div><div>Emitido em ${esc(r.gerado)}</div></div>
+  $('#rel').innerHTML=`<div class="rh"><div><b>Unimed Vitória · Relatório de Treinamentos</b><br>${esc(r.setor)}</div><div>Emitido em ${esc(r.gerado)}</div></div>
     <div class="rs"><div><b>${r.base}</b>Base ativa</div><div><b>${r.treinados.length}</b>Treinados (${pct}%)</div><div><b>${r.nao_treinados.length}</b>Não treinados (${100-pct}%)</div></div>
     <h2>Colaboradores treinados (${r.treinados.length})</h2>${tab(r.treinados,true)}
     <h2>Colaboradores não treinados (${r.nao_treinados.length})</h2>${tab(r.nao_treinados,false)}
     <p class="rn">Treinado: colaborador ativo com ao menos uma presença registrada em 2026. Ex-colaboradores não estão incluídos. Prazo para regularização das pendências: ${esc(r.prazo)}.</p>
-    <div class="sig">Responsável pelo SOS Emergências Médicas</div>`;
+    <div class="sig">Responsável pela Unimed Vitória</div>`;
   document.body.classList.add('rel-on');
   window.addEventListener('afterprint',()=>document.body.classList.remove('rel-on'),{once:true});
   setTimeout(()=>window.print(),80);
@@ -355,7 +532,7 @@ async function relatorio(){
 document.querySelectorAll('[data-rel]').forEach(b=>b.onclick=relatorio);
 
 $('#nova-turma').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Nova turma</b></div><div class="db" style="display:grid;gap:12px"><input id="t-tema" placeholder="Tema do treinamento"><input id="t-data" type="date"><input id="t-ins" placeholder="Instrutor(es)"></div><div class="df"><span class="err" id="t-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="t-ok">Salvar</button></div>`;
-  d.showModal();$('#t-ok').onclick=async()=>{try{await api('/api/turmas',{m:'POST',b:{tema:$('#t-tema').value,data:$('#t-data').value,instrutores:$('#t-ins').value}});d.close();toast('Turma criada');loadTurmas()}catch(x){$('#t-e').textContent=x.message}}};
+  d.showModal();$('#t-ok').onclick=async()=>{try{await api('/api/turmas',{m:'POST',b:{tema:$('#t-tema').value,data:$('#t-data').value,instrutores:$('#t-ins').value}});syncDeadlineNotifications(await api('/api/cobertura'));d.close();toast('Turma criada');loadTurmas()}catch(x){$('#t-e').textContent=x.message}}};
 $('#relatar-problema').onclick=()=>{
   const subject=encodeURIComponent('Relatar problema no Controle de Treinamentos');
   const body=encodeURIComponent('Olá,\n\nGostaria de relatar um problema no sistema de controle de treinamentos.\n\nDetalhes:\n');
@@ -364,8 +541,9 @@ $('#relatar-problema').onclick=()=>{
 $('#limpar').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Limpar todos os dados</b></div><div class="db"><p style="margin-top:0">Serão apagados <b>todos</b> os participantes, cargos, turmas, presenças e e-mails deste computador. A ação não pode ser desfeita.</p><input id="l-setor" placeholder="Nome do novo setor (ex.: Pronto Atendimento)" style="width:100%"><label style="display:flex;gap:8px;align-items:center;margin-top:14px;font-size:13.5px"><input type="checkbox" id="l-ok" style="min-width:auto"> Entendo que tudo será apagado</label></div><div class="df"><span class="err" id="l-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="l-go" style="background:var(--bad);border-color:var(--bad)">Apagar tudo</button></div>`;
   d.showModal();$('#l-go').onclick=async()=>{if(!$('#l-ok').checked){$('#l-e').textContent='Marque a confirmação para continuar.';return}
     const button=$('#l-go');button.disabled=true;
-    try{const result=await api('/api/limpar',{m:'POST',b:{setor:$('#l-setor').value,confirmar:true}});
-      d.close();toast('Dados apagados');await loadDash();$('#setor').textContent=result.setor}
+    try{await api('/api/limpar',{m:'POST',b:{setor:$('#l-setor').value,confirmar:true}});
+      localStorage.removeItem(notifySnapshotKey);
+      d.close();toast('Dados apagados');await loadDash()}
     catch(error){$('#l-e').textContent=error.message}
     finally{button.disabled=false}}};
 

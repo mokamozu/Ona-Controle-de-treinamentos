@@ -25,14 +25,14 @@ python -c "import fastapi, pydantic_core._pydantic_core, uvicorn, webview" >> %L
 echo [3/4] Baixando os graficos para uso offline...
 python -c "import urllib.request as u; u.urlretrieve('https://cdn.plot.ly/plotly-2.35.2.min.js','static/plotly.min.js')" >> %LOG% 2>&1 || goto erro
 echo [4/4] Gerando o executavel unico (uma unica instancia/arquivo)...
-pyinstaller --noconfirm --clean ControleTreinamentosSOS.spec >> %LOG% 2>&1 || goto erro
+pyinstaller --noconfirm --clean UnimedVitoriaTreinamentos.spec >> %LOG% 2>&1 || goto erro
 echo Preparando pacote para enviar...
-powershell -NoProfile -Command "$package='dist\Pacote Controle SOS Windows x64'; if (Test-Path -LiteralPath $package) { Remove-Item -LiteralPath $package -Recurse -Force }; New-Item -ItemType Directory -Path $package | Out-Null; Copy-Item -LiteralPath 'dist\ControleTreinamentosSOS.exe' -Destination $package; Copy-Item -LiteralPath 'LEIA-ME.txt' -Destination $package; Compress-Archive -Force -Path ($package + '\*') -DestinationPath 'dist\ControleTreinamentosSOS-Windows-x64.zip'" >> %LOG% 2>&1 || goto erro
+powershell -NoProfile -Command "$package='dist\Pacote Unimed Vitoria Windows x64'; if (Test-Path -LiteralPath $package) { Remove-Item -LiteralPath $package -Recurse -Force }; New-Item -ItemType Directory -Path $package | Out-Null; Copy-Item -LiteralPath 'dist\UnimedVitoriaTreinamentos.exe' -Destination $package; Copy-Item -LiteralPath 'LEIA-ME.txt' -Destination $package; Compress-Archive -Force -Path ($package + '\*') -DestinationPath 'dist\UnimedVitoriaTreinamentos-Windows-x64.zip'" >> %LOG% 2>&1 || goto erro
 
 echo.
 echo PRONTO!
-echo Executavel unico: dist\ControleTreinamentosSOS.exe
-echo Pacote para enviar: dist\ControleTreinamentosSOS-Windows-x64.zip
+echo Executavel unico: dist\UnimedVitoriaTreinamentos.exe
+echo Pacote para enviar: dist\UnimedVitoriaTreinamentos-Windows-x64.zip
 goto fim
 
 :arquitetura

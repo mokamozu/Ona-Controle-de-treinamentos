@@ -1,10 +1,9 @@
-CONTROLE DE TREINAMENTOS - ONA
-Organização Nacional de Acreditação
+UNIMED VITÓRIA - GESTÃO DE TREINAMENTOS
 
 COMO ABRIR
 1. Extraia o arquivo ZIP para uma pasta do computador.
 2. Abra a pasta extraida.
-3. De dois cliques em ControleTreinamentosSOS.exe.
+3. De dois cliques em UnimedVitoriaTreinamentos.exe.
 
 REQUISITOS
 - Windows 10 ou Windows 11 de 64 bits.
@@ -16,12 +15,29 @@ REQUISITOS
   usar o aplicativo depois que ele estiver instalado.
 
 DADOS E PRIVACIDADE
-- O banco de dados fica no perfil local do usuario, em:
+- Para preservar a compatibilidade com os dados ja existentes, o banco de
+  dados continua no perfil local do usuario, em:
   %LOCALAPPDATA%\Controle Treinamentos SOS\sos.db
 - Os dados nao sao sincronizados entre computadores. Para trocar de computador,
   transfira esse arquivo por um meio aprovado pela empresa e substitua o banco
   no destino com o aplicativo fechado.
 - O pacote nao inclui banco de dados nem dados pessoais.
+- Os registros de treinamentos existentes sao preservados ao atualizar o aplicativo.
+
+ACOMPANHAMENTO DOS TREINAMENTOS
+- Cada tema tem 60 dias para atingir 100% dos colaboradores ativos, contados
+  a partir da data da primeira turma cuja frequencia foi salva.
+- O painel lista treinamentos concluidos, em andamento, atrasados e ainda nao iniciados.
+- A tela "Cobertura por Tema" mostra a data de inicio, o prazo e os colaboradores pendentes.
+- Os temas exibidos sao os das turmas cadastradas. "Limpar todos os dados" tambem
+  remove esses temas; eles nao voltam ao reiniciar o aplicativo.
+- Na aba "Turmas e Presenca", use "Excluir" para remover uma turma. A exclusao
+  tambem remove as frequencias vinculadas e recalcula a cobertura do tema.
+- Temas escritos com diferenca apenas entre maiusculas e minusculas sao agrupados
+  como o mesmo tema na cobertura.
+- Ative "Avisos do Windows" no painel e permita as notificacoes para receber avisos
+  sobre novos temas, inicio do prazo de 60 dias, conclusao em 100% e atrasos.
+  Os avisos funcionam enquanto o aplicativo estiver aberto, inclusive minimizado.
 
 IMPORTAR PARTICIPANTES DE UMA PLANILHA
 - Na tela Participantes, clique em "Importar Excel" e selecione um arquivo .xlsx.

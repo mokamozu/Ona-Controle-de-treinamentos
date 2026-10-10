@@ -1,4 +1,4 @@
-"""Controle de Treinamentos - SOS Emergências Médicas (ONA).
+"""Unimed Vitória - Gestão de Treinamentos.
 
 Execução:  uvicorn main:app --reload
 """
@@ -11,7 +11,7 @@ import sys
 import unicodedata
 from io import BytesIO
 from contextlib import contextmanager
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Optional
 
@@ -125,7 +125,7 @@ def setor_atual(c) -> str:
     row = c.execute(
         "SELECT valor FROM configuracoes WHERE chave = 'setor'"
     ).fetchone()
-    return row["valor"] if row else "SOS Emergências Médicas"
+    return row["valor"] if row else "Unimed Vitória"
 
 
 def ativos_com_presencas(c):
@@ -134,7 +134,7 @@ def ativos_com_presencas(c):
                    FROM participantes p WHERE p.ativo = 1 ORDER BY p.nome""")
 
 
-app = FastAPI(title="Controle de Treinamentos SOS")
+app = FastAPI(title="Unimed Vitória - Gestão de Treinamentos")
 init_db()
 
 
@@ -178,6 +178,9 @@ def dashboard():
         turmas = q(c, "SELECT * FROM turmas ORDER BY data_iso")
         ex = c.execute("SELECT COUNT(*) FROM participantes WHERE ativo = 0").fetchone()[0]
         setor = setor_atual(c)
+        programa_apagado = c.execute(
+            "SELECT valor FROM configuracoes WHERE chave = 'programa_apagado'"
+        ).fetchone()
     status = {t["code"]: t["status"] for t in turmas}
     cargos: dict = {}
     for p in ativos:
@@ -187,9 +190,10 @@ def dashboard():
         return all(status.get(x) == "Realizada" for x in entrega["turmaCode"].split("/"))
 
     meses: dict = {}
-    for e in SEED["programa"]:
-        m = meses.setdefault(e["periodo"], [0, 0])
-        m[0 if feita(e) else 1] += 1
+    if not programa_apagado:
+        for e in SEED["programa"]:
+            m = meses.setdefault(e["periodo"], [0, 0])
+            m[0 if feita(e) else 1] += 1
     hoje = date.today().isoformat()
     futuras = [t for t in turmas if t["status"] == "Agendada"]
     proxima = next((t for t in futuras if t["data_iso"] >= hoje), futuras[0] if futuras else None)
@@ -199,7 +203,7 @@ def dashboard():
                  "pendentes": len(pend), "ex": ex, "prazo": PRAZO_FINAL},
         "pendentes": pend, "cargos": cargos, "proxima": proxima, "setor": setor,
         "programa": {"meses": meses, "entregas_ok": entregas_ok,
-                     "entregas": len(SEED["programa"]),
+                     "entregas": sum(sum(v) for v in meses.values()),
                      "turmas_ok": sum(t["status"] == "Realizada" for t in turmas),
                      "turmas": len(turmas)},
     }
@@ -224,6 +228,12 @@ class LimpaDados(BaseModel):
 class EditaParticipante(BaseModel):
     email: Optional[str] = None
     ativo: Optional[bool] = None
+
+
+class NovaTurma(BaseModel):
+    tema: str
+    data: date
+    instrutores: str = ""
 
 
 @app.get("/api/participantes")
@@ -283,7 +293,7 @@ def remove_cargo(body: NovoCargo):
 def limpar_dados(body: LimpaDados):
     if not body.confirmar:
         raise HTTPException(422, "Confirme a exclusão antes de apagar os dados.")
-    setor = body.setor.strip()[:120] or "SOS Emergências Médicas"
+    setor = body.setor.strip()[:120] or "Unimed Vitória"
     with db() as c:
         c.execute("DELETE FROM presencas")
         c.execute("DELETE FROM turmas")
@@ -296,6 +306,10 @@ def limpar_dados(body: LimpaDados):
         )
         c.execute(
             """INSERT INTO configuracoes(chave,valor) VALUES('seed_concluido','1')
+               ON CONFLICT(chave) DO UPDATE SET valor=excluded.valor"""
+        )
+        c.execute(
+            """INSERT INTO configuracoes(chave,valor) VALUES('programa_apagado','1')
                ON CONFLICT(chave) DO UPDATE SET valor=excluded.valor"""
         )
     return {"ok": True, "setor": setor}
@@ -430,6 +444,38 @@ def turmas():
                        FROM turmas t ORDER BY t.data_iso, t.id""")
 
 
+@app.post("/api/turmas", status_code=201)
+def cria_turma(body: NovaTurma):
+    tema = body.tema.strip()
+    if not tema:
+        raise HTTPException(422, "Informe o tema do treinamento.")
+    data_txt = body.data.strftime("%d/%m/%Y")
+    with db() as c:
+        codes = q(c, "SELECT code FROM turmas")
+        numero = max(
+            (int(match[1]) for row in codes if (match := re.fullmatch(r"T(\d+)", row["code"] or ""))),
+            default=0,
+        ) + 1
+        code = f"T{numero}"
+        c.execute(
+            """INSERT INTO turmas(code,tema,data_txt,data_iso,instrutores,status)
+               VALUES(?,?,?,?,?,'Agendada')""",
+            (code, tema, data_txt, body.data.isoformat(), body.instrutores.strip()),
+        )
+        turma_id = c.execute("SELECT last_insert_rowid()").fetchone()[0]
+    return {"id": turma_id, "code": code}
+
+
+@app.delete("/api/turmas/{tid}")
+def exclui_turma(tid: int):
+    with db() as c:
+        if not c.execute("SELECT 1 FROM turmas WHERE id = ?", (tid,)).fetchone():
+            raise HTTPException(404, "Turma não encontrada.")
+        c.execute("DELETE FROM presencas WHERE turma_id = ?", (tid,))
+        c.execute("DELETE FROM turmas WHERE id = ?", (tid,))
+    return {"ok": True, "id": tid}
+
+
 @app.get("/api/turmas/{tid}")
 def turma(tid: int):
     with db() as c:
@@ -453,29 +499,63 @@ def salva_presenca(tid: int, body: Presenca):
         c.execute("DELETE FROM presencas WHERE turma_id = ?", (tid,))
         c.executemany("INSERT INTO presencas VALUES(?,?,?,?)",
                       [(tid, r.mat, int(r.presente), r.justificativa.strip()) for r in body.registros])
-        if any(r.presente for r in body.registros):
+        if body.registros:
             c.execute("UPDATE turmas SET status = 'Realizada' WHERE id = ?", (tid,))
     return {"ok": True}
 
 
-# ---------- Cobertura por tema (igualdade exata do tema, sem "contém") ----------
+# ---------- Cobertura por tema (temas cadastrados nas turmas) ----------
 @app.get("/api/cobertura")
 def cobertura():
     with db() as c:
-        ativos = {p["mat"] for p in ativos_com_presencas(c)}
-        if not ativos:
-            return []
-        linhas = q(c, """SELECT t.tema, s.mat FROM presencas s
-                         JOIN turmas t ON t.id = s.turma_id WHERE s.presente = 1""")
+        participantes_ativos = ativos_com_presencas(c)
+        ativos = {p["mat"] for p in participantes_ativos}
+        temas = q(c, """SELECT TRIM(tema) AS tema FROM turmas
+                        WHERE TRIM(COALESCE(tema, '')) != ''
+                        GROUP BY LOWER(TRIM(tema)) ORDER BY tema COLLATE NOCASE""")
+        linhas = q(c, """SELECT LOWER(TRIM(t.tema)) AS tema_chave, s.mat, t.data_iso FROM presencas s
+                         JOIN turmas t ON t.id = s.turma_id
+                         WHERE s.presente = 1 ORDER BY t.data_iso""")
+        datas_inicio = q(c, """SELECT LOWER(TRIM(tema)) AS tema_chave, MIN(NULLIF(data_iso, '')) AS inicio
+                               FROM turmas WHERE status = 'Realizada'
+                               GROUP BY LOWER(TRIM(tema))""")
+    hoje = date.today()
+    inicio_por_tema = {r["tema_chave"]: r["inicio"] for r in datas_inicio}
     por_tema: dict = {}
+    primeira_presenca: dict = {}
     for r in linhas:
-        por_tema.setdefault(r["tema"], set()).add(r["mat"])
+        tema = r["tema_chave"]
+        por_tema.setdefault(tema, set()).add(r["mat"])
+        por_tema[tema] &= ativos
+        if r["mat"] in ativos:
+            primeira_presenca.setdefault(tema, {}).setdefault(r["mat"], r["data_iso"])
     out = []
-    for tema in SEED["topics"]:
-        ok = len(por_tema.get(tema, set()) & ativos)
-        out.append({"tema": tema, "treinados": ok, "pendentes": len(ativos) - ok,
-                    "pct": round(100 * ok / len(ativos)) if ativos else 0})
-    return sorted(out, key=lambda x: x["pct"])
+    for item in temas:
+        tema = item["tema"]
+        tema_chave = tema.casefold()
+        ok = len(por_tema.get(tema_chave, set()) & ativos)
+        inicio = inicio_por_tema.get(tema_chave)
+        prazo = date.fromisoformat(inicio) + timedelta(days=60) if inicio else None
+        concluido = bool(ativos) and ok == len(ativos)
+        datas_participantes = primeira_presenca.get(tema_chave, {})
+        concluido_em = max(datas_participantes.values()) if concluido and datas_participantes else None
+        status = ("sem_participantes" if not ativos else
+                  "concluido" if concluido else
+                  "nao_iniciado" if prazo is None else
+                  "atrasado" if prazo < hoje else "em_andamento")
+        out.append({
+            "tema": tema,
+            "treinados": ok,
+            "pendentes": len(ativos) - ok,
+            "pct": round(100 * ok / len(ativos)) if ativos else 0,
+            "inicio": inicio,
+            "prazo": prazo.isoformat() if prazo else None,
+            "dias_restantes": (prazo - hoje).days if prazo and not concluido else None,
+            "concluido_em": concluido_em,
+            "concluido_no_prazo": concluido_em <= prazo.isoformat() if concluido_em and prazo else None,
+            "status": status,
+        })
+    return sorted(out, key=lambda x: (-x["pct"], x["tema"].casefold()))
 
 
 @app.get("/api/relatorio")

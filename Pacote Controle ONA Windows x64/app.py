@@ -60,7 +60,7 @@ def main():
                 time.sleep(0.1)
         else:
             raise RuntimeError("O servidor local não iniciou a tempo.")
-        webview.create_window("Controle de Treinamentos - SOS Emergências Médicas | ONA", url,
+        webview.create_window("Unimed Vitória | Gestão de Treinamentos", url,
                               width=1360, height=860, min_size=(1000, 650))
         try:
             webview.start(gui="edgechromium")
@@ -72,7 +72,7 @@ def main():
                 f"Detalhe: {exc}"
             )
             ctypes.windll.user32.MessageBoxW(
-                None, message, "Controle de Treinamentos SOS", 0x10
+                None, message, "Unimed Vitória | Gestão de Treinamentos", 0x10
             )
         srv.should_exit = True
     finally:
